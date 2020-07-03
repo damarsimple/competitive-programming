@@ -97,3 +97,35 @@ function matchDictonary(string $str, array $data)
 }
 // var_dump(matchDictonary('c' , ['string', 'strong' , 'strest', 'street', 'cat']));//return cat
 // var_dump(matchDictonary('str' , ['string', 'strong' , 'strest', 'street', 'cat']));//return ['string', 'strong' , 'strest', 'street']
+function additiveInverse(array $data)
+{
+    $arr = array();
+    foreach( $data as $val)
+    {
+        if($val < 0)
+        {
+            $absolutenumber = abs($val);
+            array_push($arr, $absolutenumber);
+        }else{
+            array_push($arr, 0 - $val);
+        }
+    }
+    return $arr;
+}
+// var_dump(additiveInverse([1,2,3,4,5,-1,-5])); //return [-1,-2,-3,-4,-5,1,5]
+// var_dump(additiveInverse([-1,2])); // [1,-2]
+function reserveBool($input)
+{
+    if( gettype($input)=='boolean' && $input == true )
+    {
+        return false;
+    }elseif( gettype($input)=='boolean' && $input == false )
+    {
+        return true;
+    }
+    else{
+        return 'bukan boolean';
+    }
+}
+// var_dump(reserveBool(564654));//bukan boolean
+// var_dump(reserveBool(true)); //false

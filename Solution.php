@@ -129,3 +129,4 @@ function reserveBool($input)
 }
 // var_dump(reserveBool(564654));//bukan boolean
 // var_dump(reserveBool(true)); //false
+//** Finish Yes */
